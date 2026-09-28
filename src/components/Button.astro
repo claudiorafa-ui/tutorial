@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  height?: string;
+  textColor?: string;
+  backgroundColor?: string;
+  border?: string;
+  href?: string;
+}
+
+const {
+  title,
+  height = "auto",
+  textColor = "#000000",
+  backgroundColor = "transparent",
+  border = "none",
+  href = "#"
+} = Astro.props;
+
+import flecha_derecha from "../images/flecha-derecha.svg";
+---
+
+<a
+  href={href}
+  class="flex items-center justify-center rounded-full pl-5 pr-1 py-3 text-sm"
+  style={`
+    height: ${height};
+    color: ${textColor};
+    background-color: ${backgroundColor};
+    border: ${border || textColor};
+  `}
+>
+  <span class="mr-3">{title}</span>
+
+  <img
+    src={flecha_derecha.src}
+    alt=""
+    aria-hidden="true"
+    class="h-6 w-6"
+  />
+</a>

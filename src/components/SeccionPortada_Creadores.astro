@@ -1,0 +1,108 @@
+---
+import Button from "./Button.astro";
+import Card_Creadores from "./Card_Creadores.astro";
+
+import imagenAromasFest from "../images/background_c.jpg";
+
+const textColor = "#fdd3bc";
+const backgroundColor = "#0a0a0a";
+
+const cardsCreadores = [
+  { title: "Aromas Fest",
+    image: imagenAromasFest.src},
+  { title: "Experiencia",
+    image: imagenAromasFest.src},
+  { title: "Talleres",
+    image: imagenAromasFest.src},
+  { title: "Avant Première",
+    image: imagenAromasFest.src},
+  { title: "Avant Première",
+    image: imagenAromasFest.src},
+  { title: "Avant Première",
+    image: imagenAromasFest.src},
+  { title: "Avant Première 3",
+    image: imagenAromasFest.src},
+];
+---
+
+<section
+  class="text-[#fdd3bc] bg-[#0a0a0a] py-20 sm:py-28 overflow-hidden"
+  style={`color: ${textColor}; background-color: ${backgroundColor};`}
+>
+  <div class=" w-full">
+
+    <!-- Grid de 5 columnas -->
+    <div
+      class="w-5/6
+            mx-auto
+
+            items-end
+
+            grid
+            grid-cols-3
+            gap-6
+
+            lg:grid-cols-5">
+
+      <!-- TEXTO: 3 de 5 columnas -->
+      <div
+        class="col-span-3
+               flex
+               flex-col
+               justify-between
+               py-6
+               
+               md:col-span-3"
+      >
+
+        <!-- Título -->
+        <h2
+          class="font-serif
+                 font-bold
+                 uppercase
+                 text-8xl
+                 
+                 tracking-tight
+                 text-start
+
+                 md:text-8xl"
+        >
+          <span class="relative block">
+            Nuestros  <br />
+            Creadores
+          </span>
+        </h2>
+
+      </div>
+
+      {
+        cardsCreadores.map((card) => (
+                                      <Card_Creadores
+                                      image={card.image}
+                                      title={card.title}
+                                      />
+                                      ))
+      }
+      
+      <!-- Botón -->
+        <div class="col-span-5 
+                    mt-7 
+                    flex 
+                    justify-end 
+                    border-0">
+          <Button
+            title="Conoce la lista completa de creadores"
+            height="40px"
+            textColor="#0a0a0a"
+            backgroundColor="#fdd3bc"
+            border="none"
+            href="/aromasfest"
+          />
+        </div>
+
+    </div>
+
+   
+
+  </div>
+</section>

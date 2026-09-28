@@ -1,0 +1,46 @@
+---
+import logo from '../images/logo.svg';
+import Button from "./Button.astro";
+---
+
+<nav class="absolute top-0 left-0 z-20 w-full bg-black text-white font-serif">
+
+  <div class="mx-auto grid w-5/6 grid-cols-12 py-6">
+
+    <!-- Ícono / logo -->
+    <div class="col-span-6 flex items-center">
+      <a href="/" aria-label="Inicio">
+        <img
+          src={logo.src}
+          alt="Aromas Fest"
+          class="h-5 w-auto"
+        />
+      </a>
+    </div>
+
+    <!-- Links centrales -->
+    <!--<div class="col-span-2 flex items-center justify-center gap-8">
+      
+      <a href="#sobre-nosotras">Sobre nosotras</a>
+      <a href="#creadores">Creadores</a>
+      <a href="#talleres">Talleres</a>
+      <a href="#aromasfest">Aromasfest</a>
+      <a href="#avant-premiere">Avant première</a>
+     
+    </div>  -->
+
+    <!-- Entradas -->
+    <div class="col-span-6 flex items-center justify-end">
+      <Button
+        title="Entradas"
+        height="40px"
+        textColor="#fdd3bc"
+        backgroundColor="rgba(255, 255, 255, 0.4)"
+        border = "none"
+        href="https://www.passline.com/sitio/aromasfest-2026"
+      />
+    </div>
+
+  </div>
+
+</nav>

@@ -1,0 +1,81 @@
+---
+import Button from "./Button.astro";
+import logoAromasFestVertical from "../images/logo_AromasFest_Vertical.svg";
+
+const textColor = "#ff0000";
+---
+
+<main
+  class="relative 
+            overflow-hidden 
+            font-serif 
+            bg-black"
+  style={`color: ${textColor};`}
+>
+
+  <!-- Contenido de la portada -->
+  <div class="relative z-10">
+
+    <!-- Grilla principal -->
+    <section
+      class="w-5/6
+            mx-auto
+            flex
+            flex-col
+            gap-10
+            py-24
+             
+
+             md:grid
+             md:grid-cols-2
+             md:py-0
+             md:w-5/6"
+    >
+
+      <!-- Columna Logo AromasFest -->
+      <div
+        class="flex
+               items-center
+               justify-start
+               py-8
+               border-0
+
+               md:order-1
+               md:col-span-1
+               md:mt-20"
+      >
+        <img
+          src={logoAromasFestVertical.src}
+          alt="Logo AromasFest"
+          class="h-auto
+                 max-h-[30vh]
+                 w-3/4
+                 object-contain
+
+                 lg:h-5/6
+                 lg:w-auto"
+        />
+      </div>
+
+      <div
+        class="flex
+               items-end
+               justify-end
+               py-8
+               border-0
+
+               md:order-1
+               md:col-span-1
+               md:mt-20"
+      >
+        <h1>
+            Creado por AromasFest | 2026
+        </h1>
+      </div>
+
+
+    </section>
+
+  </div>
+
+</main>

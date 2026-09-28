@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+
+const { title = "AromasFest" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DH993W5BT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0DH993W5BT');
+    </script>
+
+
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>

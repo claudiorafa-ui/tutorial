@@ -1,0 +1,39 @@
+---
+const textColor = "#fdd3bc";
+const backgroundColorTop = "#fdd3bc";
+const backgroundColorBottom = "#0a0a0a";
+---
+
+<section
+  class="text-[#fdd3bc]
+         py-20
+         sm:py-28
+         overflow-hidden"
+  style={`
+    color: ${textColor};
+    background: linear-gradient(
+      to bottom,
+      ${backgroundColorTop} 0%,
+      ${backgroundColorTop} 50%,
+      ${backgroundColorBottom} 50%,
+      ${backgroundColorBottom} 100%
+    );
+  `}
+>
+
+  <!-- Grid de 5 columnas -->
+  <div
+    class="grid
+           grid-cols-1
+           bg-[#fdd3bc]
+           w-2/3
+           mx-auto
+           shadow-xl/40
+           relative
+           overflow-hidden
+           rounded-2xl
+           aspect-[16/9]"
+  >
+  </div>
+
+</section>

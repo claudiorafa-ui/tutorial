@@ -1,0 +1,62 @@
+---
+interface Props {
+  image: string;
+  alt?: string;
+  title: string;
+  class?: string;
+}
+
+const {
+  image,
+  alt = "",
+  title,
+  class: className = "col-span-1"
+} = Astro.props;
+---
+
+<div
+  class={`${className}
+          relative
+          overflow-hidden
+          rounded-2xl
+          aspect-[3/4]
+          z-10`}
+>
+
+  <img
+    src={image}
+    alt={alt}
+    class="absolute
+           inset-0
+           w-full
+           h-full
+           object-cover"
+  />
+
+  <div
+    class="absolute
+           inset-0
+           bg-gradient-to-t
+           from-black
+           via-black/40
+           to-transparent"
+  ></div>
+
+  <div
+    class="absolute
+           inset-x-0
+           bottom-0
+           p-6
+           text-white"
+  >
+    <h3
+      class="font-serif
+             text-2xl
+             uppercase
+             leading-none"
+    >
+      {title}
+    </h3>
+  </div>
+
+</div>

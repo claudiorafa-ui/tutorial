@@ -1,0 +1,202 @@
+---
+import imagenAromasFest from "../images/background_c.jpg";
+import Button from "./Button.astro";
+
+const textColor = "#0a0a0a";
+---
+
+<section
+  class="bg-[#fdd3bc] text-black py-20 sm:py-28 overflow-hidden"
+  style={`color: ${textColor};`}
+>
+  <div class=" w-full">
+
+    <!-- Grid de 2 columnas -->
+    <div
+      class="w-5/6
+            mx-auto
+
+            grid
+            grid-cols-2
+            gap-6
+            
+            items-stretch"
+    >
+
+      <!-- TEXTO: 1 de 2 columnas -->
+      <div
+        class="col-span-2
+               flex
+               flex-col
+               justify-between
+               py-6
+               
+               lg:col-span-1"
+      >
+
+        <!-- Título -->
+        <h2
+          class="font-serif
+                 font-bold
+                 uppercase
+                 text-8xl
+                 
+                 tracking-tight
+                 text-start
+
+                 md:text-8xl"
+        >
+          <span class="relative block">
+            Aromas <br />
+            Fest
+          </span>
+        </h2>
+
+        <!-- Descripción -->
+        <p
+          class="mt-8
+                 max-w-md
+                 text-base
+                 sm:text-lg
+                 leading-relaxed"
+        >
+          Una experiencia donde el vino, la creatividad
+          y las personas se encuentran para descubrir
+          nuevas formas de disfrutar.
+        </p>
+
+        <!-- Botón -->
+        <div class="mt-7 flex justify-start">
+          <Button
+            title="Conoce más"
+            height="40px"
+            textColor="#fdd3bc"
+            backgroundColor="#0a0a0a"
+            border="none"
+            href="/aromasfest"
+          />
+        </div>
+
+      </div>
+
+
+      <!-- IMAGEN: 1 de 2 columnas -->
+      <div
+        class="col-span-2
+               lg:col-span-1
+               relative
+               overflow-hidden
+               rounded-2xl
+               aspect-[4/3]
+               md:aspect-[1/1]"
+      >
+        <img
+          src={imagenAromasFest.src}
+          alt="AromasFest"
+          class="absolute
+                 inset-0
+                 w-full
+                 h-full
+                 object-cover"
+        />
+      </div>
+
+    </div>
+
+    <!-- Grid de 4 columnas fotos -->
+    <div
+      class="w-5/6
+            mx-auto
+            mt-6
+
+            grid
+            grid-cols-4
+            gap-6
+            
+            items-stretch"
+    >
+
+      <!-- IMAGEN 1: 1 de 4 columnas -->
+      <div
+        class="col-span-2
+               md:col-span-1
+               relative
+               overflow-hidden
+               rounded-2xl
+               aspect-[1/1]"
+      >
+        <img
+          src={imagenAromasFest.src}
+          alt="AromasFest"
+          class="absolute
+                 inset-0
+                 w-full
+                 h-full
+                 object-cover"
+        />
+      </div>
+
+      <!-- IMAGEN 2: 3 de 12 columnas -->
+      <div
+        class="col-span-2
+               md:col-span-1
+               relative
+               overflow-hidden
+               rounded-2xl
+               aspect-[1/1]"
+      >
+        <img
+          src={imagenAromasFest.src}
+          alt="AromasFest"
+          class="absolute
+                 inset-0
+                 w-full
+                 h-full
+                 object-cover"
+        />
+      </div>
+
+      <!-- IMAGEN 3: 3 de 12 columnas -->
+      <div
+        class="col-span-2
+               md:col-span-1
+               relative
+               overflow-hidden
+               rounded-2xl
+               aspect-[1/1]"
+      >
+        <img
+          src={imagenAromasFest.src}
+          alt="AromasFest"
+          class="absolute
+                 inset-0
+                 w-full
+                 h-full
+                 object-cover"
+        />
+      </div>
+
+      <!-- IMAGEN 4: 3 de 12 columnas -->
+      <div
+        class="col-span-2
+               md:col-span-1
+               relative
+               overflow-hidden
+               rounded-2xl
+               aspect-[1/1]"
+      >
+        <img
+          src={imagenAromasFest.src}
+          alt="AromasFest"
+          class="absolute
+                 inset-0
+                 w-full
+                 h-full
+                 object-cover"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>

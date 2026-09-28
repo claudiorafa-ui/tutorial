@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import background from "../images/background_c.jpg";
+import Button from "../components/Button.astro";
+import logoAromasFestVertical from "../images/logo_AromasFest_Vertical.svg";
+
+const textColor = "#fdd3bc";
+---
+
+<Layout title="Aromasfest">
+
+  <main
+    class="relative min-h-screen overflow-hidden font-serif"
+    style={`color: ${textColor};`}
+  >
+
+    <!-- Background -->
+    <div class="absolute inset-0">
+      <img
+        src={background.src}
+        alt="Background"
+        class="h-full w-full object-cover"
+      />
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 min-h-screen">
+
+      <Navbar />
+
+      <!-- Grilla principal -->
+      <section class="mx-auto grid min-h-screen w-5/6 grid-cols-12">
+
+        <!-- Columna 1 -->
+        <div class="col-span-4 mt-20 flex flex-col justify-center">
+
+          <h1 class="text-6xl">
+            Avant Première
+          </h1>
+
+          <!-- Entradas -->
+          <div class="col-span-2 flex items-center justify-start py-8">
+            <Button
+              title="Entradas"
+              height="30px"
+              textColor="#fdd3bc"
+              backgroundColor="rgba(255, 255, 255, 0.3)"
+              border = "none"
+              href="https://www.passline.com/sitio-evento/avant-premiere-aromasfest"
+            />
+          </div>
+
+          <h1 class="text-1xl">
+            Viernes<br />
+            6 de Noviembre<br />
+            18:00 - 22:00
+          </h1>
+
+          <h1 class="text-1xl py-4">
+            Malbec 12851<br />
+            Chat Noir<br />
+            La Dehesa<br />
+          </h1>
+
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-span-4 mt-20 flex items-center justify-center">
+          <img
+            src={logoAromasFestVertical.src}
+            alt="Logo AromasFest"
+            class="h-5/6 object-contain"
+          />
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="col-span-4 mt-20 flex flex-col justify-center">
+
+          <h1 class="text-1xl text-end">
+            Sábado<br />
+            7 de Noviembre<br />
+            11:00 - 21:00
+          </h1>
+
+          <h1 class="text-1xl py-4 text-end">
+            Malbec 12851<br />
+            Hotel Wyndham Pettra<br />
+            La Dehesa<br />
+          </h1>
+
+          <!-- Entradas -->
+          <div class="col-span-2 flex items-center justify-end py-8">
+            <Button
+              title="Entradas"
+              height="30px"
+              textColor="#fdd3bc"
+              backgroundColor="rgba(255, 255, 255, 0.3)"
+              border = "none"
+              href="https://www.passline.com/sitio-evento/iii-version-aromasfest-2026"
+            />
+          </div>
+
+          <h1 class="text-6xl text-end">
+            IIIa<br />
+            Versión
+          </h1>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+</Layout>
